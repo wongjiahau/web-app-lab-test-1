@@ -10,7 +10,7 @@ $name     = $formData['Name'];
 $email    = $formData['Email'];
 $phone    = $formData['Phone'];
 
-$conn  = mysqli_connect('localhost', 'hou32hou', '842684268426', 'uecs2094_ptest');
+$conn  = mysqli_connect('localhost', 'username', 'password', 'uecs2094_ptest');
 $query = "INSERT INTO se_1500181_staff(staffNo, name, email, phone) VALUES(?, ?, ?, ?);";
 $stmt  = mysqli_prepare($conn, $query);
 $stmt->bind_param('isss', $staffNo, $name, $email, $phone);
